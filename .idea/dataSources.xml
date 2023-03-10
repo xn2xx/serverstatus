@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="serverstatus.db" uuid="7b3b6aea-1049-4c80-8b95-8c3108d693b2">
+    <data-source source="LOCAL" name="serverstatus" uuid="6e7c6d07-1e25-4b30-8534-08fe13910847">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/sqlite/serverstatus.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\dev_xian\Desktop\serverstatus\sqlite\serverstatus.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.40.1/sqlite-jdbc-3.40.1.jar</url>
+        </library>
+      </libraries>
     </data-source>
   </component>
 </project>

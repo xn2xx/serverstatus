@@ -30,6 +30,7 @@ class SqliteServer:
         # for row in desc:
         #     return row
         return desc
+
     @staticmethod
     def query_info():
         """查询数据库所有连接信息"""
@@ -44,11 +45,12 @@ class SqliteServer:
     @staticmethod
     def query_ipaddr_info(ipaddr=None):
         """通过ip查询数据库的服务器连接信息"""
-        sql = "select s.ipaddr,s.username,s.password,s.terminal,s.port,s.protocol from server_info s where s.ipaddr = '{}'".format(
+        sql = "select s.ipaddr,s.username,s.password,s.terminal,s.port,s.protocol from server_info s where s.ipaddr = " \
+              "'{}'".format(
             ipaddr)
         result = SqliteServer.__sql_operation(sql)
         if not result:
-            #logging.WARN("没有此ip")
+            # logging.WARN("没有此ip")
             return "沒有此ip"
         else:
             return result
@@ -63,6 +65,6 @@ class SqliteServer:
 
 
 if __name__ == '__main__':
-    res:dict = SqliteServer.query_info()
+    res: dict = SqliteServer.query_info()
     print(res)
-    #res: dict = SqliteServer.query_ipaddr_info("demo1.scitqn.cn")
+    # res: dict = SqliteServer.query_ipaddr_info("demo1.scitqn.cn")
